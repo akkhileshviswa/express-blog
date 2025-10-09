@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="/styles/styles.css" />
+</head>
+
+<body>
+	<h1>Welcome <%= user ? user.name : "Guest" %>
+	</h1>
+	<% if (user) { %>
+		<div><a href="/user/profile">Profile</a> | <a href="/logout">Logout</a></div>
+	<% } else { %>
+		<% if (error) { %>
+			<div class="error"><%= error %></div><br>
+		<% } %>
+		<div>
+			<a href="/signup">Sign Up</a> |
+			<a href="/signin">Sign In</a> |
+			<a href="/user/auth/google">Login with Google</a>
+		</div>
+	<% } %>
+	<script src="/scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <div class="posts-list">
+        <h1 class="text-center">All Posts</h1>
+
+        <div class="text-center mt-2">
+            <a href="/posts/create" class="create-link">+ Create New Post</a>
+        </div>
+
+        <% if (message) { %>
+            <p class="success text-center" id="successMessage">
+                <%= message %>
+            </p>
+        <% } %>
+
+        <% if (error) { %>
+            <p class="error text-center">
+                <%= error %>
+            </p>
+        <% } %>
+
+        <% if (posts && posts.length> 0) { %>
+            <% posts.forEach(post=> { %>
+                <div class="post-card">
+                    <h2>
+                        <%= post.title %>
+                    </h2>
+                    <p>
+                        <%= post.content %>
+                    </p>
+                    <div class="mt-2">
+                        <a href="/posts/edit/<%= post.id %>" class="action-link">Edit</a> |
+                        <a href="/posts/delete/<%= post.id %>" class="action-link delete">Delete</a>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p class="text-center mt-4">No posts yet!</p>
+        <% } %>
+    </div>
+    <script src="/scripts/main.js"></script>
+</body>
+
+</html>

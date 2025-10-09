@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="/styles/styles.css" />
+</head>
+
+<body class="signup">
+	<h1>Sign Up</h1>
+	<form id="signupForm">
+		<label>Name <span class="required">*</span></label>
+		<input type="text" name="name" placeholder="Enter Name" autocomplete="off">
+		<label>City <span class="required">*</span></label>
+		<input type="text" name="city" placeholder="Enter City" autocomplete="off">
+		<label>Mobile</label>
+		<input type="text" name="mobile" placeholder="Enter Mobile" autocomplete="off">
+		<label>Username <span class="required">*</span></label>
+		<input type="text" name="username" placeholder="Enter Username" autocomplete="off">
+		<label>Password <span class="required">*</span></label>
+		<input type="password" name="password" placeholder="Enter Password" autocomplete="off">
+		<label>Re-enter Password <span class="required">*</span></label>
+		<input type="password" name="confirm_password" placeholder="Enter Password" autocomplete="off">
+		<span class="error"></span>
+		<button type="submit">Sign Up</button>
+	</form>
+	<p>Already have an account? <a href="/signin">Sign In</a></p>
+	<p><a href="/user/auth/google">Login with Google</a></p>
+	<script src="/scripts/main.js"></script>
+</body>
+
+</html>
