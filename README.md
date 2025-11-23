@@ -14,7 +14,7 @@
 
 ## Setup Instructions
 ```bash
-git clone [https://github.com/akkhileshviswa/express-blog.git
+git clone https://github.com/akkhileshviswa/express-blog.git
 cd blog_express
 npm install
 npm start
